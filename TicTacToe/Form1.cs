@@ -74,108 +74,65 @@ namespace TicTacToe
                 textOutput.Text = "That spot has already been taken."; // Do not use button.Enabled = false, it looks ugly!
             }
 
-            checkForWinner(); // Checks for 3 in a row and returns a boolean
-            endGame(checkForWinner()); // Checks if checkForWinner has returned a boolean that is true, if so it disables all playing field buttons
+            endGame(checkForWinner("X"));
+            endGame(checkForWinner("O"));
         } // End of button_click
 
-        private bool checkForWinner()
+        private bool checkForWinner(string playerPiece)
         {
-            bool hasOWon = false;
-            bool hasXWon = false;
+            bool hasPlayerWon = false; // Player meaning both the human player and the computer player, not only one in particular
 
-            // Check for O Victory
-            if ((R1C1.Text == "O") && (R1C2.Text == "O") && (R1C3.Text == "O")) // First Row Horizontal Win [O]
+            if ((R1C1.Text == playerPiece) && (R1C2.Text == playerPiece) && (R1C3.Text == playerPiece)) // First Row Horizontal Win
             {
-                hasOWon = true;
+                hasPlayerWon = true;
             }
-            else if ((R2C1.Text == "O") && (R2C2.Text == "O") && (R2C3.Text == "O")) // Second Row Horizontal Win [O]
+            else if ((R2C1.Text == playerPiece) && (R2C2.Text == playerPiece) && (R2C3.Text == playerPiece)) // Second Row Horizontal Win
             {
-                hasOWon = true;
+                hasPlayerWon = true;
             }
-            else if ((R3C1.Text == "O") && (R3C2.Text == "O") && (R3C3.Text == "O")) // Third Row Horizontal Win [O]
+            else if ((R3C1.Text == playerPiece) && (R3C2.Text == playerPiece) && (R3C3.Text == playerPiece)) // Third Row Horizontal Win
             {
-                hasOWon = true;
+                hasPlayerWon = true;
             }
-            else if ((R1C1.Text == "O") && (R2C1.Text == "O") && (R3C1.Text == "O")) // First Vertical Column Win [O]
+            else if ((R1C1.Text == playerPiece) && (R2C1.Text == playerPiece) && (R3C1.Text == playerPiece)) // First Vertical Column Win
             {
-                hasOWon = true;
+                hasPlayerWon = true;
             }
-            else if ((R1C2.Text == "O") && (R2C2.Text == "O") && (R3C2.Text == "O")) // Second Vertical Column Win [O]
+            else if ((R1C2.Text == playerPiece) && (R2C2.Text == playerPiece) && (R3C2.Text == playerPiece)) // Second Vertical Column Win
             {
-                hasOWon = true;
+                hasPlayerWon = true;
             }
-            else if ((R1C3.Text == "O") && (R2C3.Text == "O") && (R3C3.Text == "O")) // Third Vertical Column Win [O]
+            else if ((R1C3.Text == playerPiece) && (R2C3.Text == playerPiece) && (R3C3.Text == playerPiece)) // Third Vertical Column Win
             {
-                hasOWon = true;
+                hasPlayerWon = true;
             }
-            else if ((R1C1.Text == "O") && (R2C2.Text == "O") && (R3C3.Text == "O")) // Top Left Diagonal Win [O]
+            else if ((R1C1.Text == playerPiece) && (R2C2.Text == playerPiece) && (R3C3.Text == playerPiece)) // Top Left Diagonal Win
             {
-                hasOWon = true;
+                hasPlayerWon = true;
             }
-            else if ((R1C3.Text == "O") && (R2C2.Text == "O") && (R3C1.Text == "O")) // Top Right Diagonal Win [O]
+            else if ((R1C3.Text == playerPiece) && (R2C2.Text == playerPiece) && (R3C1.Text == playerPiece)) // Top Right Diagonal Win
             {
-                hasOWon = true;
+                hasPlayerWon = true;
             }
 
 
 
-            // Check for X Victory
-            if ((R1C1.Text == "X") && (R1C2.Text == "X") && (R1C3.Text == "X")) // First Row Horizontal Win [X]
+            // Check to see if the game has concluded
+            if (hasPlayerWon == true)
             {
-                hasXWon = true;
-            }
-            else if ((R2C1.Text == "X") && (R2C2.Text == "X") && (R2C3.Text == "X")) // Second Row Horizontal Win [X]
-            {
-                hasXWon = true;
-            }
-            else if ((R3C1.Text == "X") && (R3C2.Text == "X") && (R3C3.Text == "X")) // Third Row Horizontal Win [X]
-            {
-                hasXWon = true;
-            }
-            else if ((R1C1.Text == "X") && (R2C1.Text == "X") && (R3C1.Text == "X")) // First Vertical Column Win [X]
-            {
-                hasXWon = true;
-            }
-            else if ((R1C2.Text == "X") && (R2C2.Text == "X") && (R3C2.Text == "X")) // Second Vertical Column Win [X]
-            {
-                hasXWon = true;
-            }
-            else if ((R1C3.Text == "X") && (R2C3.Text == "X") && (R3C3.Text == "X")) // Third Vertical Column Win [X]
-            {
-                hasXWon = true;
-            }
-            else if ((R1C1.Text == "X") && (R2C2.Text == "X") && (R3C3.Text == "X")) // Top Left Diagonal Win [X]
-            {
-                hasXWon = true;
-            }
-            else if ((R1C3.Text == "X") && (R2C2.Text == "X") && (R3C1.Text == "X")) // Top Right Diagonal Win [X]
-            {
-                hasXWon = true;
-            }
-
-
-
-            // Declare winner
-            if (hasOWon == true)
-            {
-                textOutput.Text = "O has won!";
-                return true;
-            }
-            else if (hasXWon == true)
-            {
-                textOutput.Text = "X has won!";
-                return true;
+                textOutput.Text = playerPiece + " has won!";
+                return hasPlayerWon;
             }
             else if (turnCount == 9)
             {
                 textOutput.Text = "It's a draw partner.";
-                return true;
+                return hasPlayerWon;
             }
             else
             {
-                return false;
+                return hasPlayerWon;
             }
-        } // End of checkForWinner
+        } // End of checkForWinner()
 
         private void endGame(bool gameComplete) // At the end of the game this method disables all playing field buttons to prevent players from using the board
         {
