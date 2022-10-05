@@ -71,14 +71,14 @@
             // newGameToolStripMenuItem
             // 
             this.newGameToolStripMenuItem.Name = "newGameToolStripMenuItem";
-            this.newGameToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.newGameToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
             this.newGameToolStripMenuItem.Text = "New Game";
             this.newGameToolStripMenuItem.Click += new System.EventHandler(this.newGameToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -103,6 +103,7 @@
             this.textOutput.Name = "textOutput";
             this.textOutput.Size = new System.Drawing.Size(236, 23);
             this.textOutput.TabIndex = 1;
+            this.textOutput.TabStop = false;
             this.textOutput.Text = "Round: 0";
             // 
             // R1C1
@@ -112,6 +113,7 @@
             this.R1C1.Name = "R1C1";
             this.R1C1.Size = new System.Drawing.Size(75, 75);
             this.R1C1.TabIndex = 2;
+            this.R1C1.TabStop = false;
             this.R1C1.UseVisualStyleBackColor = true;
             this.R1C1.Click += new System.EventHandler(this.button_click);
             // 
@@ -122,6 +124,7 @@
             this.R1C2.Name = "R1C2";
             this.R1C2.Size = new System.Drawing.Size(75, 75);
             this.R1C2.TabIndex = 3;
+            this.R1C2.TabStop = false;
             this.R1C2.UseVisualStyleBackColor = true;
             this.R1C2.Click += new System.EventHandler(this.button_click);
             // 
@@ -132,6 +135,7 @@
             this.R1C3.Name = "R1C3";
             this.R1C3.Size = new System.Drawing.Size(75, 75);
             this.R1C3.TabIndex = 4;
+            this.R1C3.TabStop = false;
             this.R1C3.UseVisualStyleBackColor = true;
             this.R1C3.Click += new System.EventHandler(this.button_click);
             // 
@@ -142,6 +146,7 @@
             this.R2C1.Name = "R2C1";
             this.R2C1.Size = new System.Drawing.Size(75, 75);
             this.R2C1.TabIndex = 5;
+            this.R2C1.TabStop = false;
             this.R2C1.UseVisualStyleBackColor = true;
             this.R2C1.Click += new System.EventHandler(this.button_click);
             // 
@@ -152,6 +157,7 @@
             this.R2C2.Name = "R2C2";
             this.R2C2.Size = new System.Drawing.Size(75, 75);
             this.R2C2.TabIndex = 6;
+            this.R2C2.TabStop = false;
             this.R2C2.UseVisualStyleBackColor = true;
             this.R2C2.Click += new System.EventHandler(this.button_click);
             // 
@@ -162,6 +168,7 @@
             this.R2C3.Name = "R2C3";
             this.R2C3.Size = new System.Drawing.Size(75, 75);
             this.R2C3.TabIndex = 7;
+            this.R2C3.TabStop = false;
             this.R2C3.UseVisualStyleBackColor = true;
             this.R2C3.Click += new System.EventHandler(this.button_click);
             // 
@@ -172,6 +179,7 @@
             this.R3C1.Name = "R3C1";
             this.R3C1.Size = new System.Drawing.Size(75, 75);
             this.R3C1.TabIndex = 8;
+            this.R3C1.TabStop = false;
             this.R3C1.UseVisualStyleBackColor = true;
             this.R3C1.Click += new System.EventHandler(this.button_click);
             // 
@@ -182,6 +190,7 @@
             this.R3C2.Name = "R3C2";
             this.R3C2.Size = new System.Drawing.Size(75, 75);
             this.R3C2.TabIndex = 9;
+            this.R3C2.TabStop = false;
             this.R3C2.UseVisualStyleBackColor = true;
             this.R3C2.Click += new System.EventHandler(this.button_click);
             // 
@@ -192,6 +201,7 @@
             this.R3C3.Name = "R3C3";
             this.R3C3.Size = new System.Drawing.Size(75, 75);
             this.R3C3.TabIndex = 10;
+            this.R3C3.TabStop = false;
             this.R3C3.UseVisualStyleBackColor = true;
             this.R3C3.Click += new System.EventHandler(this.button_click);
             // 
