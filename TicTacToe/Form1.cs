@@ -80,7 +80,7 @@ namespace TicTacToe
 
         private bool checkForWinner(string playerPiece)
         {
-            bool hasPlayerWon = false; // Player meaning both the human player and the computer player, not only one in particular
+            bool hasPlayerWon = false;
 
             if ((R1C1.Text == playerPiece) && (R1C2.Text == playerPiece) && (R1C3.Text == playerPiece)) // First Row Horizontal Win
             {
@@ -130,7 +130,7 @@ namespace TicTacToe
             }
             else
             {
-                return hasPlayerWon;
+                return hasPlayerWon; // In other words, the player has not won
             }
         } // End of checkForWinner()
 
