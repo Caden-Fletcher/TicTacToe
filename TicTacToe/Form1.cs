@@ -74,69 +74,75 @@ namespace TicTacToe
                 textOutput.Text = "That spot has already been taken."; // Do not use button.Enabled = false, it looks ugly!
             }
 
-            endGame(checkForWinner("X"));
-            endGame(checkForWinner("O"));
+            ConcludeGame(ContinueRound("X"));
+            ConcludeGame(ContinueRound("O"));
         } // End of button_click
 
-        private bool checkForWinner(string playerPiece)
+        private byte ContinueRound(string playerPiece)
         {
-            bool hasPlayerWon = false;
+            // Returning a boolean works for checking if a player has won or not, but if there is a draw it causes problems for me
+            // Return 0 = Next Round
+            // Return 1 = Draw
+            // Return 2 = Current Player Has Won
 
             if ((R1C1.Text == playerPiece) && (R1C2.Text == playerPiece) && (R1C3.Text == playerPiece)) // First Row Horizontal Win
             {
-                hasPlayerWon = true;
+                textOutput.Text = playerPiece + " has won!";
+                return 2; // Current Player Has Won
             }
             else if ((R2C1.Text == playerPiece) && (R2C2.Text == playerPiece) && (R2C3.Text == playerPiece)) // Second Row Horizontal Win
             {
-                hasPlayerWon = true;
+                textOutput.Text = playerPiece + " has won!";
+                return 2; // Current Player Has Won
             }
             else if ((R3C1.Text == playerPiece) && (R3C2.Text == playerPiece) && (R3C3.Text == playerPiece)) // Third Row Horizontal Win
             {
-                hasPlayerWon = true;
+                textOutput.Text = playerPiece + " has won!";
+                return 2; // Current Player Has Won
             }
             else if ((R1C1.Text == playerPiece) && (R2C1.Text == playerPiece) && (R3C1.Text == playerPiece)) // First Vertical Column Win
             {
-                hasPlayerWon = true;
+                textOutput.Text = playerPiece + " has won!";
+                return 2; // Current Player Has Won
             }
             else if ((R1C2.Text == playerPiece) && (R2C2.Text == playerPiece) && (R3C2.Text == playerPiece)) // Second Vertical Column Win
             {
-                hasPlayerWon = true;
+                textOutput.Text = playerPiece + " has won!";
+                return 2; // Current Player Has Won
             }
             else if ((R1C3.Text == playerPiece) && (R2C3.Text == playerPiece) && (R3C3.Text == playerPiece)) // Third Vertical Column Win
             {
-                hasPlayerWon = true;
+                textOutput.Text = playerPiece + " has won!";
+                return 2; // Current Player Has Won
             }
             else if ((R1C1.Text == playerPiece) && (R2C2.Text == playerPiece) && (R3C3.Text == playerPiece)) // Top Left Diagonal Win
             {
-                hasPlayerWon = true;
+                textOutput.Text = playerPiece + " has won!";
+                return 2; // Current Player Has Won
             }
             else if ((R1C3.Text == playerPiece) && (R2C2.Text == playerPiece) && (R3C1.Text == playerPiece)) // Top Right Diagonal Win
             {
-                hasPlayerWon = true;
-            }
-
-
-
-            // Check to see if the game has concluded
-            if (hasPlayerWon == true)
-            {
                 textOutput.Text = playerPiece + " has won!";
-                return hasPlayerWon;
+                return 2; // Current Player Has Won
             }
             else if (turnCount == 9)
             {
                 textOutput.Text = "It's a draw partner.";
-                return hasPlayerWon;
+                return 1; // Draw
             }
             else
             {
-                return hasPlayerWon; // In other words, the player has not won
+                return 0; // Next Round
             }
-        } // End of checkForWinner()
+        } // End of ContinueRound
 
-        private void endGame(bool gameComplete) // At the end of the game this method disables all playing field buttons to prevent players from using the board
+        private void ConcludeGame(int gameState)
         {
-            if (gameComplete == true)
+            // Return 0 = Next Round
+            // Return 1 = Draw
+            // Return 2 = Current Player Has Won
+
+            if (gameState == 2 || gameState == 1) // The board will be disabled if a player has won or if the game ends in a draw
             {
                 R1C1.Enabled = false; // First row
                 R1C2.Enabled = false;
@@ -148,6 +154,6 @@ namespace TicTacToe
                 R3C2.Enabled = false;
                 R3C3.Enabled = false;
             }
-        } // End of endGame()
+        } // End of ConcludeGame
     }
 }
