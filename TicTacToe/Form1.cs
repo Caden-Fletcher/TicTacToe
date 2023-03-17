@@ -18,7 +18,7 @@ namespace TicTacToe
             MessageBox.Show("By Caden", "About");
         }
 
-        private void newGameToolStripMenuItem_Click(object sender, EventArgs e) // Clears the board and textbox
+        private void newGameToolStripMenuItem_Click(object sender, EventArgs e) // Reset the Game
         {
             // Clear all text in the playing field
             R1C1.Text = ""; // First row
