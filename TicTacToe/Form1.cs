@@ -82,8 +82,8 @@ namespace TicTacToe
                 playerOneTurn = !playerOneTurn; // Player one turn begins             
             }           
 
-            ConcludeGame(ContinueRound("X"));
             ConcludeGame(ContinueRound("O"));
+            ConcludeGame(ContinueRound("X"));
         } // End of button_click
 
         private void ConcludeGame(int gameState)
