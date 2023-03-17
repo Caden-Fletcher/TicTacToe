@@ -10,6 +10,3 @@ To achieve this the program will be redesigned; Player 1 will be the human playe
 The AI will start off simple, prioritizing: Center, Corners, Sides
 
 The AI will choose a random tile if there is more than one tile to choose.
-
-
-Player pieces will be randomly generated. Two fields will be created to show what player piece belongs to what player.
