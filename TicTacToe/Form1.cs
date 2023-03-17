@@ -2,7 +2,10 @@ namespace TicTacToe
 {
     public partial class Form1 : Form
     {
-        bool turn = true; // True = X turn, false = O turn
+        bool playerOneTurn = true; // Player one will start first
+        bool playerTwoTurn = false;
+        char playerOnePiece = 'O'; // Human Player
+        char playerTwoPiece = 'X'; // Computer Player
         int turnCount = 0;
 
         public Form1()
@@ -44,6 +47,10 @@ namespace TicTacToe
             R3C1.Enabled = true; // Third row
             R3C2.Enabled = true;
             R3C3.Enabled = true;
+
+            // Reset player turns
+            playerOneTurn = true;
+            playerTwoTurn = false;
         } // End of newGame
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
@@ -55,32 +62,54 @@ namespace TicTacToe
         {
             Button button = (Button)sender;
 
-            if (turn == true && button.Text != " " && button.Text != "X" && button.Text != "O")
+            if (playerOneTurn == true && button.Text != " " && button.Text != "X" && button.Text != "O") // Human Player
             {
-                button.Text = "X";
-                turn = !turn; // Turn will become false
+                button.Text = playerOnePiece.ToString();
+                playerOneTurn = !playerOneTurn; // Player one turn ends
                 turnCount = turnCount + 1;
                 textOutput.Text = "Round: " + turnCount;
+
+                playerTwoTurn = !playerTwoTurn; // Player two turn begins               
             }
-            else if (turn == false && button.Text != " " && button.Text != "X" && button.Text != "O")
+
+            if (playerTwoTurn == true && button.Text != " " && button.Text != "X" && button.Text != "O") // Computer Player
             {
-                button.Text = "O";
-                turn = !turn; // Turn will become true
+                button.Text = playerTwoPiece.ToString();
+                playerTwoTurn = !playerTwoTurn; // Player two turn ends
                 turnCount = turnCount + 1;
                 textOutput.Text = "Round: " + turnCount;
-            }
-            else
-            {
-                textOutput.Text = "That spot has already been taken."; // Do not use button.Enabled = false, it looks ugly!
-            }
+
+                playerOneTurn = !playerOneTurn; // Player one turn begins             
+            }           
 
             ConcludeGame(ContinueRound("X"));
             ConcludeGame(ContinueRound("O"));
         } // End of button_click
 
+        private void ConcludeGame(int gameState)
+        {
+            // Return types are tied to the ContinueRound method, do not change one without changing the other
+            // Return 0 = Next Round
+            // Return 1 = Draw
+            // Return 2 = Current Player Has Won
+
+            if (gameState == 2 || gameState == 1) // The board will be disabled if a player has won or if the game ends in a draw
+            {
+                R1C1.Enabled = false; // First row
+                R1C2.Enabled = false;
+                R1C3.Enabled = false;
+                R2C1.Enabled = false; // Second row
+                R2C2.Enabled = false;
+                R2C3.Enabled = false;
+                R3C1.Enabled = false; // Third row
+                R3C2.Enabled = false;
+                R3C3.Enabled = false;
+            }
+        } // End of ConcludeGame
+
         private byte ContinueRound(string playerPiece)
         {
-            // Returning a boolean works for checking if a player has won or not, but if there is a draw it causes problems for me
+            // Return types are tied to the ConcludeGame method, do not change one without changing the other
             // Return 0 = Next Round
             // Return 1 = Draw
             // Return 2 = Current Player Has Won
@@ -135,25 +164,5 @@ namespace TicTacToe
                 return 0; // Next Round
             }
         } // End of ContinueRound
-
-        private void ConcludeGame(int gameState)
-        {
-            // Return 0 = Next Round
-            // Return 1 = Draw
-            // Return 2 = Current Player Has Won
-
-            if (gameState == 2 || gameState == 1) // The board will be disabled if a player has won or if the game ends in a draw
-            {
-                R1C1.Enabled = false; // First row
-                R1C2.Enabled = false;
-                R1C3.Enabled = false;
-                R2C1.Enabled = false; // Second row
-                R2C2.Enabled = false;
-                R2C3.Enabled = false;
-                R3C1.Enabled = false; // Third row
-                R3C2.Enabled = false;
-                R3C3.Enabled = false;
-            }
-        } // End of ConcludeGame
     }
 }

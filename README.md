@@ -1,6 +1,6 @@
 A simple game of Tic Tac Toe designed as a winform application.
 
-The first game will have X starting first then it alternates after every new game.
+The first game will have O starting first then it alternates after every new game.
 
 # To Do
 There are plans to implement a simple AI to play against.
