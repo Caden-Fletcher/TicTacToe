@@ -1,10 +1,1 @@
 A simple game of Tic Tac Toe designed as a winform application.
-
-# To Do
-There are plans to implement a simple AI to play against.
-
-To achieve this the program will be redesigned; Player 1 will be the human player and Player 2 will be the computer player.
-
-The AI will start off simple, prioritizing: Center, Corners, Sides
-
-The AI will choose a random tile if there is more than one tile to choose.
