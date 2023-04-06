@@ -28,210 +28,207 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.newGameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aboutToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.textOutput = new System.Windows.Forms.TextBox();
-            this.R1C1 = new System.Windows.Forms.Button();
-            this.R1C2 = new System.Windows.Forms.Button();
-            this.R1C3 = new System.Windows.Forms.Button();
-            this.R2C1 = new System.Windows.Forms.Button();
-            this.R2C2 = new System.Windows.Forms.Button();
-            this.R2C3 = new System.Windows.Forms.Button();
-            this.R3C1 = new System.Windows.Forms.Button();
-            this.R3C2 = new System.Windows.Forms.Button();
-            this.R3C3 = new System.Windows.Forms.Button();
-            this.menuStrip1.SuspendLayout();
-            this.SuspendLayout();
+            menuStrip1 = new MenuStrip();
+            fileToolStripMenuItem = new ToolStripMenuItem();
+            newGameToolStripMenuItem = new ToolStripMenuItem();
+            exitToolStripMenuItem = new ToolStripMenuItem();
+            aboutToolStripMenuItem1 = new ToolStripMenuItem();
+            aboutToolStripMenuItem = new ToolStripMenuItem();
+            textOutput = new TextBox();
+            R1C1 = new Button();
+            R1C2 = new Button();
+            R1C3 = new Button();
+            R2C1 = new Button();
+            R2C2 = new Button();
+            R2C3 = new Button();
+            R3C1 = new Button();
+            R3C2 = new Button();
+            R3C3 = new Button();
+            menuStrip1.SuspendLayout();
+            SuspendLayout();
             // 
             // menuStrip1
             // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fileToolStripMenuItem,
-            this.aboutToolStripMenuItem1});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(260, 24);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
+            menuStrip1.Items.AddRange(new ToolStripItem[] { fileToolStripMenuItem, aboutToolStripMenuItem1 });
+            menuStrip1.Location = new Point(0, 0);
+            menuStrip1.Name = "menuStrip1";
+            menuStrip1.Size = new Size(260, 24);
+            menuStrip1.TabIndex = 0;
+            menuStrip1.Text = "menuStrip1";
             // 
             // fileToolStripMenuItem
             // 
-            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.newGameToolStripMenuItem,
-            this.exitToolStripMenuItem});
-            this.fileToolStripMenuItem.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(39, 20);
-            this.fileToolStripMenuItem.Text = "File";
+            fileToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { newGameToolStripMenuItem, exitToolStripMenuItem });
+            fileToolStripMenuItem.Font = new Font("Calibri", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+            fileToolStripMenuItem.Size = new Size(39, 20);
+            fileToolStripMenuItem.Text = "File";
             // 
             // newGameToolStripMenuItem
             // 
-            this.newGameToolStripMenuItem.Name = "newGameToolStripMenuItem";
-            this.newGameToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
-            this.newGameToolStripMenuItem.Text = "New Game";
-            this.newGameToolStripMenuItem.Click += new System.EventHandler(this.newGameToolStripMenuItem_Click);
+            newGameToolStripMenuItem.Name = "newGameToolStripMenuItem";
+            newGameToolStripMenuItem.ShortcutKeys = Keys.Control | Keys.N;
+            newGameToolStripMenuItem.Size = new Size(180, 22);
+            newGameToolStripMenuItem.Text = "New Game";
+            newGameToolStripMenuItem.Click += newGameToolStripMenuItem_Click;
             // 
             // exitToolStripMenuItem
             // 
-            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
-            this.exitToolStripMenuItem.Text = "Exit";
-            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            exitToolStripMenuItem.ShortcutKeys = Keys.Control | Keys.Q;
+            exitToolStripMenuItem.Size = new Size(180, 22);
+            exitToolStripMenuItem.Text = "Quit";
+            exitToolStripMenuItem.Click += exitToolStripMenuItem_Click;
             // 
             // aboutToolStripMenuItem1
             // 
-            this.aboutToolStripMenuItem1.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.aboutToolStripMenuItem1.Name = "aboutToolStripMenuItem1";
-            this.aboutToolStripMenuItem1.Size = new System.Drawing.Size(51, 20);
-            this.aboutToolStripMenuItem1.Text = "About";
-            this.aboutToolStripMenuItem1.Click += new System.EventHandler(this.aboutToolStripMenuItem1_Click);
+            aboutToolStripMenuItem1.Font = new Font("Calibri", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            aboutToolStripMenuItem1.Name = "aboutToolStripMenuItem1";
+            aboutToolStripMenuItem1.Size = new Size(51, 20);
+            aboutToolStripMenuItem1.Text = "About";
+            aboutToolStripMenuItem1.Click += aboutToolStripMenuItem1_Click;
             // 
             // aboutToolStripMenuItem
             // 
-            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.aboutToolStripMenuItem.Text = "About";
+            aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            aboutToolStripMenuItem.Size = new Size(180, 22);
+            aboutToolStripMenuItem.Text = "About";
             // 
             // textOutput
             // 
-            this.textOutput.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textOutput.Location = new System.Drawing.Point(12, 33);
-            this.textOutput.Name = "textOutput";
-            this.textOutput.Size = new System.Drawing.Size(236, 23);
-            this.textOutput.TabIndex = 1;
-            this.textOutput.TabStop = false;
-            this.textOutput.Text = "Round: 0";
+            textOutput.Font = new Font("Calibri", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            textOutput.Location = new Point(12, 33);
+            textOutput.Name = "textOutput";
+            textOutput.Size = new Size(236, 23);
+            textOutput.TabIndex = 1;
+            textOutput.TabStop = false;
+            textOutput.Text = "Round: 0";
             // 
             // R1C1
             // 
-            this.R1C1.Font = new System.Drawing.Font("Arial Unicode MS", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.R1C1.Location = new System.Drawing.Point(12, 62);
-            this.R1C1.Name = "R1C1";
-            this.R1C1.Size = new System.Drawing.Size(75, 75);
-            this.R1C1.TabIndex = 2;
-            this.R1C1.TabStop = false;
-            this.R1C1.UseVisualStyleBackColor = true;
-            this.R1C1.Click += new System.EventHandler(this.button_click);
+            R1C1.Font = new Font("Arial Unicode MS", 36F, FontStyle.Regular, GraphicsUnit.Point);
+            R1C1.Location = new Point(12, 62);
+            R1C1.Name = "R1C1";
+            R1C1.Size = new Size(75, 75);
+            R1C1.TabIndex = 2;
+            R1C1.TabStop = false;
+            R1C1.UseVisualStyleBackColor = true;
+            R1C1.Click += button_click;
             // 
             // R1C2
             // 
-            this.R1C2.Font = new System.Drawing.Font("Arial Unicode MS", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.R1C2.Location = new System.Drawing.Point(93, 62);
-            this.R1C2.Name = "R1C2";
-            this.R1C2.Size = new System.Drawing.Size(75, 75);
-            this.R1C2.TabIndex = 3;
-            this.R1C2.TabStop = false;
-            this.R1C2.UseVisualStyleBackColor = true;
-            this.R1C2.Click += new System.EventHandler(this.button_click);
+            R1C2.Font = new Font("Arial Unicode MS", 36F, FontStyle.Regular, GraphicsUnit.Point);
+            R1C2.Location = new Point(93, 62);
+            R1C2.Name = "R1C2";
+            R1C2.Size = new Size(75, 75);
+            R1C2.TabIndex = 3;
+            R1C2.TabStop = false;
+            R1C2.UseVisualStyleBackColor = true;
+            R1C2.Click += button_click;
             // 
             // R1C3
             // 
-            this.R1C3.Font = new System.Drawing.Font("Arial Unicode MS", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.R1C3.Location = new System.Drawing.Point(173, 62);
-            this.R1C3.Name = "R1C3";
-            this.R1C3.Size = new System.Drawing.Size(75, 75);
-            this.R1C3.TabIndex = 4;
-            this.R1C3.TabStop = false;
-            this.R1C3.UseVisualStyleBackColor = true;
-            this.R1C3.Click += new System.EventHandler(this.button_click);
+            R1C3.Font = new Font("Arial Unicode MS", 36F, FontStyle.Regular, GraphicsUnit.Point);
+            R1C3.Location = new Point(173, 62);
+            R1C3.Name = "R1C3";
+            R1C3.Size = new Size(75, 75);
+            R1C3.TabIndex = 4;
+            R1C3.TabStop = false;
+            R1C3.UseVisualStyleBackColor = true;
+            R1C3.Click += button_click;
             // 
             // R2C1
             // 
-            this.R2C1.Font = new System.Drawing.Font("Arial Unicode MS", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.R2C1.Location = new System.Drawing.Point(12, 143);
-            this.R2C1.Name = "R2C1";
-            this.R2C1.Size = new System.Drawing.Size(75, 75);
-            this.R2C1.TabIndex = 5;
-            this.R2C1.TabStop = false;
-            this.R2C1.UseVisualStyleBackColor = true;
-            this.R2C1.Click += new System.EventHandler(this.button_click);
+            R2C1.Font = new Font("Arial Unicode MS", 36F, FontStyle.Regular, GraphicsUnit.Point);
+            R2C1.Location = new Point(12, 143);
+            R2C1.Name = "R2C1";
+            R2C1.Size = new Size(75, 75);
+            R2C1.TabIndex = 5;
+            R2C1.TabStop = false;
+            R2C1.UseVisualStyleBackColor = true;
+            R2C1.Click += button_click;
             // 
             // R2C2
             // 
-            this.R2C2.Font = new System.Drawing.Font("Arial Unicode MS", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.R2C2.Location = new System.Drawing.Point(93, 143);
-            this.R2C2.Name = "R2C2";
-            this.R2C2.Size = new System.Drawing.Size(75, 75);
-            this.R2C2.TabIndex = 6;
-            this.R2C2.TabStop = false;
-            this.R2C2.UseVisualStyleBackColor = true;
-            this.R2C2.Click += new System.EventHandler(this.button_click);
+            R2C2.Font = new Font("Arial Unicode MS", 36F, FontStyle.Regular, GraphicsUnit.Point);
+            R2C2.Location = new Point(93, 143);
+            R2C2.Name = "R2C2";
+            R2C2.Size = new Size(75, 75);
+            R2C2.TabIndex = 6;
+            R2C2.TabStop = false;
+            R2C2.UseVisualStyleBackColor = true;
+            R2C2.Click += button_click;
             // 
             // R2C3
             // 
-            this.R2C3.Font = new System.Drawing.Font("Arial Unicode MS", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.R2C3.Location = new System.Drawing.Point(173, 143);
-            this.R2C3.Name = "R2C3";
-            this.R2C3.Size = new System.Drawing.Size(75, 75);
-            this.R2C3.TabIndex = 7;
-            this.R2C3.TabStop = false;
-            this.R2C3.UseVisualStyleBackColor = true;
-            this.R2C3.Click += new System.EventHandler(this.button_click);
+            R2C3.Font = new Font("Arial Unicode MS", 36F, FontStyle.Regular, GraphicsUnit.Point);
+            R2C3.Location = new Point(173, 143);
+            R2C3.Name = "R2C3";
+            R2C3.Size = new Size(75, 75);
+            R2C3.TabIndex = 7;
+            R2C3.TabStop = false;
+            R2C3.UseVisualStyleBackColor = true;
+            R2C3.Click += button_click;
             // 
             // R3C1
             // 
-            this.R3C1.Font = new System.Drawing.Font("Arial Unicode MS", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.R3C1.Location = new System.Drawing.Point(12, 222);
-            this.R3C1.Name = "R3C1";
-            this.R3C1.Size = new System.Drawing.Size(75, 75);
-            this.R3C1.TabIndex = 8;
-            this.R3C1.TabStop = false;
-            this.R3C1.UseVisualStyleBackColor = true;
-            this.R3C1.Click += new System.EventHandler(this.button_click);
+            R3C1.Font = new Font("Arial Unicode MS", 36F, FontStyle.Regular, GraphicsUnit.Point);
+            R3C1.Location = new Point(12, 222);
+            R3C1.Name = "R3C1";
+            R3C1.Size = new Size(75, 75);
+            R3C1.TabIndex = 8;
+            R3C1.TabStop = false;
+            R3C1.UseVisualStyleBackColor = true;
+            R3C1.Click += button_click;
             // 
             // R3C2
             // 
-            this.R3C2.Font = new System.Drawing.Font("Arial Unicode MS", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.R3C2.Location = new System.Drawing.Point(93, 222);
-            this.R3C2.Name = "R3C2";
-            this.R3C2.Size = new System.Drawing.Size(75, 75);
-            this.R3C2.TabIndex = 9;
-            this.R3C2.TabStop = false;
-            this.R3C2.UseVisualStyleBackColor = true;
-            this.R3C2.Click += new System.EventHandler(this.button_click);
+            R3C2.Font = new Font("Arial Unicode MS", 36F, FontStyle.Regular, GraphicsUnit.Point);
+            R3C2.Location = new Point(93, 222);
+            R3C2.Name = "R3C2";
+            R3C2.Size = new Size(75, 75);
+            R3C2.TabIndex = 9;
+            R3C2.TabStop = false;
+            R3C2.UseVisualStyleBackColor = true;
+            R3C2.Click += button_click;
             // 
             // R3C3
             // 
-            this.R3C3.Font = new System.Drawing.Font("Arial Unicode MS", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.R3C3.Location = new System.Drawing.Point(173, 222);
-            this.R3C3.Name = "R3C3";
-            this.R3C3.Size = new System.Drawing.Size(75, 75);
-            this.R3C3.TabIndex = 10;
-            this.R3C3.TabStop = false;
-            this.R3C3.UseVisualStyleBackColor = true;
-            this.R3C3.Click += new System.EventHandler(this.button_click);
+            R3C3.Font = new Font("Arial Unicode MS", 36F, FontStyle.Regular, GraphicsUnit.Point);
+            R3C3.Location = new Point(173, 222);
+            R3C3.Name = "R3C3";
+            R3C3.Size = new Size(75, 75);
+            R3C3.TabIndex = 10;
+            R3C3.TabStop = false;
+            R3C3.UseVisualStyleBackColor = true;
+            R3C3.Click += button_click;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(260, 309);
-            this.Controls.Add(this.R3C3);
-            this.Controls.Add(this.R3C2);
-            this.Controls.Add(this.R3C1);
-            this.Controls.Add(this.R2C3);
-            this.Controls.Add(this.R2C2);
-            this.Controls.Add(this.R2C1);
-            this.Controls.Add(this.R1C3);
-            this.Controls.Add(this.R1C2);
-            this.Controls.Add(this.R1C1);
-            this.Controls.Add(this.textOutput);
-            this.Controls.Add(this.menuStrip1);
-            this.MainMenuStrip = this.menuStrip1;
-            this.MaximizeBox = false;
-            this.Name = "Form1";
-            this.ShowIcon = false;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Tic Tac Toe";
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(260, 309);
+            Controls.Add(R3C3);
+            Controls.Add(R3C2);
+            Controls.Add(R3C1);
+            Controls.Add(R2C3);
+            Controls.Add(R2C2);
+            Controls.Add(R2C1);
+            Controls.Add(R1C3);
+            Controls.Add(R1C2);
+            Controls.Add(R1C1);
+            Controls.Add(textOutput);
+            Controls.Add(menuStrip1);
+            MainMenuStrip = menuStrip1;
+            MaximizeBox = false;
+            Name = "Form1";
+            ShowIcon = false;
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Tic Tac Toe";
+            menuStrip1.ResumeLayout(false);
+            menuStrip1.PerformLayout();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion

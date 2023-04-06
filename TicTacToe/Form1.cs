@@ -80,7 +80,7 @@ namespace TicTacToe
                 textOutput.Text = "Round: " + turnCount;
 
                 playerOneTurn = !playerOneTurn; // Player one turn begins             
-            }           
+            }
 
             ConcludeGame(ContinueRound("O"));
             ConcludeGame(ContinueRound("X"));
